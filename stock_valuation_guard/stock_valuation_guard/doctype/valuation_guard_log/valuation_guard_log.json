@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:VGL-{run_date}-{###}",
+ "creation": "2026-07-13 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "run_date",
+  "run_time",
+  "status",
+  "column_break_1",
+  "negative_stock_items",
+  "zero_valuation_invoices",
+  "section_break_correction",
+  "repost_jobs_created",
+  "repost_jobs_requeued",
+  "column_break_2",
+  "repost_jobs_completed",
+  "repost_jobs_failed",
+  "section_break_summary",
+  "summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "run_date",
+   "fieldtype": "Date",
+   "label": "Run Date",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "run_time",
+   "fieldtype": "Time",
+   "label": "Run Time",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Success\nPartial\nFailed",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "negative_stock_items",
+   "fieldtype": "Int",
+   "label": "Negative Stock Items Detected",
+   "default": "0"
+  },
+  {
+   "fieldname": "zero_valuation_invoices",
+   "fieldtype": "Int",
+   "label": "Zero Valuation Invoice Rows",
+   "default": "0"
+  },
+  {
+   "fieldname": "section_break_correction",
+   "fieldtype": "Section Break",
+   "label": "Correction Results"
+  },
+  {
+   "fieldname": "repost_jobs_created",
+   "fieldtype": "Int",
+   "label": "Repost Jobs Created",
+   "default": "0"
+  },
+  {
+   "fieldname": "repost_jobs_requeued",
+   "fieldtype": "Int",
+   "label": "Repost Jobs Requeued",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repost_jobs_completed",
+   "fieldtype": "Int",
+   "label": "Repost Jobs Completed",
+   "default": "0"
+  },
+  {
+   "fieldname": "repost_jobs_failed",
+   "fieldtype": "Int",
+   "label": "Repost Jobs Still Failing",
+   "default": "0"
+  },
+  {
+   "fieldname": "section_break_summary",
+   "fieldtype": "Section Break",
+   "label": "Run Summary"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Long Text",
+   "label": "Summary"
+  }
+ ],
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-07-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Stock Valuation Guard",
+ "name": "Valuation Guard Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "search_fields": "run_date,status",
+ "sort_field": "run_date",
+ "sort_order": "DESC",
+ "track_changes": 0
+}
